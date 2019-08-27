@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang=en ng-app=ives>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Faiz Hafeez</title>
+    <link href=css/materialize.css rel=stylesheet>
+    <link href=lib/fontawesome/css/font-awesome.min.css rel=stylesheet>
+    <link href=css/style.css rel=stylesheet>
+</head>
+
+<body ng-controller="MainController as main">
+    <ng-hello interval={{interval}}></ng-hello>
+    <header class=header>
+        <div ng-trianglify="" class=background options=triangleconfig interval={{interval}}></div>
+        <div class="circles h-card">
+            <div class="logocircle " style="background-color:white!important" ><a href=https://www.youtube.com/channel/UC_bG0cRGTT_GZvi_CgIoIiA rel=me target=_blank><i class="logo fa fa-youtube-play"  style="color:red"></i></i></a></div>
+            <div class="logocircle " style="background-color:white!important"><a href="https://www.instagram.com/Faiz_Hafeez/" rel=me target=_blank><i class="logo   fa fa-instagram"  style="color:red"></i></a></div>
+            <div class="logocircle " style="background-color:white!important"><a href=https://twitter.com/FaizHafeez_313 rel=me target=_blank><i class="logo   fa fa-twitter"  style="color:#48AAE6"></i></a></div>
+            <div class="logocircle " style="background-color:white!important"><a href=https://www.facebook.com/faizhafeez313 rel=me target=_blank><i class="logo   fa fa-facebook-f" style="color:#4267B2" ></i></a></div>
+            <div class=profileimg-container><img ng-repeat="i in main.ivesimages" class="profileimg u-photo" ng-src="img/faiz_hafeez_logo.jpg" ng-class="{'shown': main.currentIves === $index}"> <i ng-click=main.goDown() class="darkcolor fa fa-chevron-down"></i></div>
+        </div>
+    </header>
+    <div class=main>
+        <section id=userinforow class="row firstrow contentrow bgcolor-transparent">
+            <div class="col s12 m5 l7">
+                <h2 class=darkcolor>Who am I?</h2>
+                <p class=flow-text>
+                    <li>Physics Lecturer at ARPA Schools & College Metroville</li>
+                    <li>Studied Bachelor of Science in Physics at Karachi University</li>
+                    <li>Physicist</li>
+                    <li>Teacher</li>
+                    <li>Vlogger</li>
+                    <li>Photographer</li>
+                    <li>Social worker</li>
+                    <li>Social Media Activist</li>
+                 
+                </p>
+            </div>
+            <div class="col s12 m7 l5">
+                <h2 class="darkcolor h-card">Information</h2>
+                <div class=info><i class="fa fa-user icon darkcolor"></i> <span class="text p-name">Faiz Hafeez</span> <i ng-click=main.changeIvesImage() class="fa fa-picture-o action ultralightcolor darkbgcolor hoverdarker"></i></div>
+                <div class=info><i class="fa fa-envelope icon darkcolor"></i> <span class="text u-email"><a href="mail:faizhafeez3131@gmail.com" class="__cf_email__">Faizhafeez3131@gmail.com</a> </a></span>
+                    <a class="fa fa-paper-plane action ultralightcolor darkbgcolor hoverdarker"></a>
+                </div>
+                <div class=info><i class="fa fa-whatsapp icon darkcolor"></i> <span class="text p-region">+923012452567 
+                </span> <i class="fa fa-paper-plane action ultralightcolor darkbgcolor hoverdarker"></i></div>
+                <div class=info><i class="fa fa-map-marker icon darkcolor"></i> <span class="text p-region" style="font-size: 24px !important;">Metroville SITE, Karachi, Pakistan</span> <i ng-click=main.showMaps() class="fa fa-globe action ultralightcolor darkbgcolor hoverdarker"></i></div>
+            </div>
+        </section>
+        <ui-gmap-google-map center=map.center zoom=map.zoom control=map.control>
+            <ui-gmap-marker idkey="'Faiz'" coords="{latitude: 24.924180994760476, longitude: 66.99708734550336}"></ui-gmap-marker>
+        </ui-gmap-google-map>
+        <section id=skillrow class="row contentrow centerrow ultradarkbgcolor-transparent">
+            
+            <div class="col s12 skill scrollfade">
+                <h2 style="padding-bottom: 0;" class="col s12">Key Skills</h2>
+                <div class="col s12 skills">
+                    <h3 class="col s12">Quiz Competition</h3>
+                    <div class="name  s12">I am winner of all Karachi quiz competitions and also have arranged competitions at various
+                        schools in Karachi.</div>
+                    <div class="name col s12 border"></div>
+                    <h3 class="col s12">Communication</h3>
+                    <div class="name col s12">Strong team working, leadership and communication skills.</div>
+                    <div class="name col s12 border"></div>
+                    <h3 class="col s12">Computer Skills</h3>
+                    <div class="name col s4">Adobe PhotoShop</div>
+                    <div class="name col s4">MS-Office</div>
+                </div>
+            </div>
+        </section>
+        <section id=projectrow class="row contentrow centerrow ultradarkbgcolor-transparent">
+            
+                <div class="col s12 skill scrollfade">
+                    <h2 style="padding-bottom: 0;" class="col s12">Awards</h2>
+                    <div class="col s12 skills">
+                        <h3 class="name col s12">I am Awarded by Prime Minister's National Laptop Scheme</h3>
+                        <div class="name col s12 border"></div>
+                        <h3 class=" name col s12">Best Teacher of the Year Award</h3>
+                    </div>
+                </div>
+        </section>
+            <div style="text-align: center">
+                <p>Faiz Hafeez © 2019, Developed by <a href="https:huzaifasaeed@github.com" style="color: aliceblue">Huzaifa Saeed</a></p>
+             </div>
+                
+               
+    </div>
+    <script data-cfasync="false" src="cdn-cgi/scripts/af2821b0/cloudflare-static/email-decode.min.js"></script>
+    <script src=lib/jquery/dist/jquery.min.js></script>
+    <script src=lib/materialize/dist/js/materialize.min.js></script>
+    <script src=lib/angular/angular.min.js></script>
+    <script src=lib/angular-animate/angular-animate.min.js></script>
+    <script src=lib/trianglify/dist/trianglify.min.js></script>
+    <script src=lib/moment/min/moment.min.js></script>
+    <script src=lib/angular-embed-codepen/dist/embed-codepen.min.js></script>
+    <script src=lib/lodash/dist/lodash.min.js></script>
+    <script src=lib/angular-google-maps/dist/angular-google-maps.min.js></script>
+    <script src=lib/angular-sanitize/angular-sanitize.min.js></script>
+    <script src=all.min.js></script>
+</body>
+</html>
