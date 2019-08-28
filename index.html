@@ -18,7 +18,7 @@
         <div ng-trianglify="" class=background options=triangleconfig interval={{interval}}></div>
         <div class="circles h-card">
             <div class="logocircle " style="background-color:white!important" ><a href=https://www.youtube.com/channel/UC_bG0cRGTT_GZvi_CgIoIiA rel=me target=_blank><i class="logo fa fa-youtube-play"  style="color:red"></i></i></a></div>
-            <div class="logocircle " style="background-color:white!important"><a href="https://www.instagram.com/Faiz_Hafeez/" rel=me target=_blank><i class="logo   fa fa-instagram"  style="color:red"></i></a></div>
+            <div class="logocircle " style="background-color:white!important"><a href="https://www.instagram.com/Faiz_Hafeez/" rel=me target=_blank><i class="logo   fa fa-instagram"  style="color:#DF1F6A"></i></a></div>
             <div class="logocircle " style="background-color:white!important"><a href=https://twitter.com/FaizHafeez_313 rel=me target=_blank><i class="logo   fa fa-twitter"  style="color:#48AAE6"></i></a></div>
             <div class="logocircle " style="background-color:white!important"><a href=https://www.facebook.com/faizhafeez313 rel=me target=_blank><i class="logo   fa fa-facebook-f" style="color:#4267B2" ></i></a></div>
             <div class=profileimg-container><img ng-repeat="i in main.ivesimages" class="profileimg u-photo" ng-src="img/faiz_hafeez_logo.jpg" ng-class="{'shown': main.currentIves === $index}"> <i ng-click=main.goDown() class="darkcolor fa fa-chevron-down"></i></div>
@@ -37,18 +37,22 @@
                     <li>Photographer</li>
                     <li>Social worker</li>
                     <li>Social Media Activist</li>
-                 
+                    <a href="CV_Faiz_Hafeez.docx" download="CV Faiz Hafeez">
+                        <img style="margin-top: 20px" src="img/CV_Button.png" alt="CV Faiz Hafeez" width="40%" height="40%">
+                      </a>
+                      
                 </p>
             </div>
+        
             <div class="col s12 m7 l5">
                 <h2 class="darkcolor h-card">Information</h2>
                 <div class=info><i class="fa fa-user icon darkcolor"></i> <span class="text p-name">Faiz Hafeez</span> <i ng-click=main.changeIvesImage() class="fa fa-picture-o action ultralightcolor darkbgcolor hoverdarker"></i></div>
-                <div class=info><i class="fa fa-envelope icon darkcolor"></i> <span class="text u-email"><a href="mail:faizhafeez3131@gmail.com" class="__cf_email__">Faizhafeez3131@gmail.com</a> </a></span>
+                <div class=info><i class="fa fa-envelope icon darkcolor"></i> <span class="text u-email"><a href="mailto:faizhafeez3131@gmail.com" class="__cf_email__">Faizhafeez3131@gmail.com</a> </a></span>
                     <a class="fa fa-paper-plane action ultralightcolor darkbgcolor hoverdarker"></a>
                 </div>
                 <div class=info><i class="fa fa-whatsapp icon darkcolor"></i> <span class="text p-region">+923012452567 
                 </span> <i class="fa fa-paper-plane action ultralightcolor darkbgcolor hoverdarker"></i></div>
-                <div class=info><i class="fa fa-map-marker icon darkcolor"></i> <span class="text p-region" style="font-size: 24px !important;">Metroville SITE, Karachi, Pakistan</span> <i ng-click=main.showMaps() class="fa fa-globe action ultralightcolor darkbgcolor hoverdarker"></i></div>
+                <div class=info><i class="fa fa-map-marker icon darkcolor"></i> <span class="text p-name">Metroville site, Karachi, Pakistan</span> <i ng-click=main.showMaps() class="fa fa-globe action ultralightcolor darkbgcolor hoverdarker"></i></div>
             </div>
         </section>
         <ui-gmap-google-map center=map.center zoom=map.zoom control=map.control>
@@ -68,6 +72,7 @@
                     <div class="name col s12 border"></div>
                     <h3 class="col s12">Computer Skills</h3>
                     <div class="name col s4">Adobe PhotoShop</div>
+                    <div class="col s12 "></div>
                     <div class="name col s4">MS-Office</div>
                 </div>
             </div>
